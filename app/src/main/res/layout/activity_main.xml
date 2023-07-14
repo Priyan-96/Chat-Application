@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/toolBarLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:id="@+id/toolBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_weight="70"
+                android:fontFamily="@font/circular"
+                android:text="Messages"
+                android:textColor="#474444"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_weight="15"
+                android:src="@drawable/search_icon" />
+
+            <ImageView
+                android:id="@+id/dots"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_weight="10"
+                android:src="@drawable/dots" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toolBarLinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:paddingRight="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:weightSum="100"
+            >
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/back_button"
+                android:layout_weight="20"/>
+
+            <SearchView
+                android:id="@+id/userSearch"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/chatbox_bg"
+                android:queryHint="Search"
+                android:iconifiedByDefault="false"
+                android:searchIcon="@drawable/search_icon"
+                android:closeIcon="@drawable/close_icon"
+                android:layout_weight="70"
+                android:theme="@style/SearchViewStyle"
+                android:queryBackground="@android:color/transparent"
+                />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/toolBarLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ECECEC"
+        android:layout_above="@id/userRecyclerView"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="635dp"
+        android:layout_below="@+id/toolBar"
+        android:layout_marginTop="0dp"
+        tools:listitem="@layout/user_layout" />
+
+</RelativeLayout>

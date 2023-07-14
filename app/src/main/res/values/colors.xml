@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3366ff</color>
+    <color name="textColor">#474444</color>
+    <color name="colorAccent">#3366ff</color>
+    <color name="chatbox">#f2f2f2</color>
+    <color name="bg_color">#e1e8ee</color>
+    <color name="actionBar">#ced9e3</color>
+    <color name="purple_200">#3366ff</color>
+    <color name="purple_500">#3366ff</color>
+    <color name="purple_700">#3366ff</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#008000</color>
+    <color name="lightgreen">#009900</color>
+    <color name="chatline">#C1C7CC</color>
+</resources>
