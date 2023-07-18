@@ -79,6 +79,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         backButton.setOnClickListener{
+            searchBox.setQuery("",false)
+            searchBox.clearFocus()
             toggleViews()
         }
 
